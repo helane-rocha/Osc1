@@ -56,7 +56,7 @@ class ViewController: UIViewController {
         blockChannel.volume = 1.0
         blockChannel.audioDescription = AEAudioController.nonInterleaved16BitStereoAudioDescription()
             
-        audioController.addChannels([blockChannel!])
+        audioController.addChannels([blockChannel])
         audioController.preferredBufferDuration = 0.005
         do {
             try audioController.start()
