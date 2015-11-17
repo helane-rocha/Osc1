@@ -7,7 +7,7 @@
 //
 
 import UIKit
-var audioController : AEAudioController?
+var audioController : AEAudioController! = nil
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

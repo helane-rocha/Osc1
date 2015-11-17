@@ -11,7 +11,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var blockChannel : AEBlockChannel?
+    var blockChannel : AEBlockChannel! = nil
     var oscillatorPosition : Float = 0
     var oscillatorRate : Float = 622.0/44100.0
     
@@ -52,14 +52,14 @@ class ViewController: UIViewController {
             
         })
         
-        blockChannel!.channelIsMuted = false
-        blockChannel!.volume = 1.0
-        blockChannel!.audioDescription = AEAudioController.nonInterleaved16BitStereoAudioDescription()
+        blockChannel.channelIsMuted = false
+        blockChannel.volume = 1.0
+        blockChannel.audioDescription = AEAudioController.nonInterleaved16BitStereoAudioDescription()
             
-        audioController!.addChannels([blockChannel!])
-        audioController!.preferredBufferDuration = 0.005
+        audioController.addChannels([blockChannel!])
+        audioController.preferredBufferDuration = 0.005
         do {
-            try audioController!.start()
+            try audioController.start()
         } catch _ {
         }
     }
